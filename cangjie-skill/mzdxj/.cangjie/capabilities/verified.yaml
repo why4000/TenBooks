@@ -1,0 +1,68 @@
+capabilities:
+  - capability_id: contradiction-analysis
+    slug: contradiction-analysis
+    intents:
+      - 用矛盾分析找问题关键
+    keywords: [矛盾, 主要矛盾, 具体问题具体分析]
+    one_liner: 分析矛盾普遍性特殊性，抓主要矛盾和主要方面。
+    importance: high
+    frontmatter:
+      description: 承认矛盾普遍性，分析特殊性，抓主要矛盾和矛盾的主要方面，注意转化条件。
+    also_read:
+      - practice-knowledge-cycle
+    promotion:
+      destination: promoted
+  - capability_id: practice-knowledge-cycle
+    slug: practice-knowledge-cycle
+    intents:
+      - 用实践-认识循环获得真知
+    keywords: [实践, 认识, 两飞跃]
+    one_liner: 实践→认识→再实践→再认识，螺旋上升。
+    importance: high
+    frontmatter:
+      description: 通过实践→认识（感性→理性）→再实践→再认识的循环，获得并检验真知。
+    also_read:
+      - contradiction-analysis
+      - investigation-first
+    promotion:
+      destination: promoted
+  - capability_id: mass-line-method
+    slug: mass-line-method
+    intents:
+      - 用群众路线工作
+    keywords: [群众路线, 从群众中来, 到群众中去]
+    one_liner: 从群众中收集意见，集中形成政策，再回到群众中检验。
+    importance: medium
+    frontmatter:
+      description: 一切为了群众，一切依靠群众，从群众中来，到群众中去。
+    also_read:
+      - investigation-first
+    promotion:
+      destination: router
+  - capability_id: investigation-first
+    slug: investigation-first
+    intents:
+      - 决策前先调查研究
+    keywords: [调查研究, 实事求是, 本本主义]
+    one_liner: 没有调查没有发言权，先深入实际再下结论。
+    importance: medium
+    frontmatter:
+      description: 决策前深入实际调查，收集第一手材料，分析后得出结论。
+    also_read:
+      - practice-knowledge-cycle
+      - mass-line-method
+    promotion:
+      destination: router
+  - capability_id: protracted-strategy
+    slug: protracted-strategy
+    intents:
+      - 弱对强用持久战策略
+    keywords: [持久战, 战略防御, 战略相持, 战略反攻]
+    one_liner: 弱对强经防御→相持→反攻三阶段转化力量对比。
+    importance: medium
+    frontmatter:
+      description: 弱对强不能速胜，经战略防御→战略相持→战略反攻三阶段取胜。
+    also_read:
+      - contradiction-analysis
+    promotion:
+      destination: promoted

@@ -1,0 +1,74 @@
+capabilities:
+  - capability_id: object-to-phenomenon-reduction
+    slug: object-to-phenomenon-reduction
+    intents:
+      - 还原媒介对象到其现象根源
+      - 批判对象主义媒介观
+    keywords: [现象媒介, 对象媒介, 现象学还原, 媒介哲学]
+    one_liner: 将被对象化的媒介概念追溯回身体经验中的现象媒介。
+    importance: high
+    frontmatter:
+      description: 当媒介被当作客观对象导致悖论时，执行现象学还原，追溯其在身体经验中的根源。
+    also_read:
+      - embodied-meta-medium
+      - thickness-analysis
+    promotion:
+      destination: router
+  - capability_id: embodied-meta-medium
+    slug: embodied-meta-medium
+    intents:
+      - 分析媒介的具身根源
+      - 识别身体局限与媒介发明的关系
+    keywords: [具身化, 元媒介, 身体, 媒介延伸]
+    one_liner: 身体是元媒介，一切媒介都是身体为克服局限的延伸。
+    importance: high
+    frontmatter:
+      description: 以身体为元媒介分析媒介的存在论根源，识别特定媒介克服的身体局限。
+    also_read:
+      - object-to-phenomenon-reduction
+      - complementarity-logic
+    promotion:
+      destination: router
+  - capability_id: five-features-analysis
+    slug: five-features-analysis
+    intents:
+      - 从五重特征分析现象媒介
+      - 处理媒介概念的二元对立
+    keywords: [含混性, 意向性, 象征性, 情境性, 主体间性]
+    one_liner: 从含混/意向/象征/情境/主体间性五重特征分析现象媒介。
+    importance: high
+    frontmatter:
+      description: 用五重特征框架分析具体媒介，每重特征处理一组二元对立的原初统一。
+    also_read:
+      - object-to-phenomenon-reduction
+      - thickness-analysis
+    promotion:
+      destination: promoted
+  - capability_id: thickness-analysis
+    slug: thickness-analysis
+    intents:
+      - 批判媒介透明性理想
+      - 识别不可还原的身体厚度
+    keywords: [身体厚度, 透明性, 技术乐观主义, 不可还原性]
+    one_liner: 分析媒介技术的透明性主张，指出身体厚度的不可还原性。
+    importance: medium
+    frontmatter:
+      description: 当技术主张实现透明/无摩擦交流时，执行厚度分析指出其不可能性。
+    also_read:
+      - embodied-meta-medium
+      - five-features-analysis
+    promotion:
+      destination: router
+  - capability_id: complementarity-logic
+    slug: complementarity-logic
+    intents:
+      - 应用补余逻辑分析媒介延伸
+    keywords: [补余, 斯蒂格勒, 延伸, 外延]
+    one_liner: 媒介延伸在延伸过程中形成，外延之前无内在性。
+    importance: medium
+    frontmatter:
+      description: 用斯蒂格勒的补余逻辑分析媒介作为身体延伸的生成过程。
+    also_read:
+      - embodied-meta-medium
+    promotion:
+      destination: router

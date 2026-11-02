@@ -1,0 +1,71 @@
+capabilities:
+  - capability_id: systematic-doubt
+    slug: systematic-doubt
+    intents:
+      - 把所有可怀疑的信念暂时悬置
+    keywords: [普遍怀疑, 悬置, 梦境, 恶魔, 成见]
+    one_liner: 找出信念共用的原则，一次拆掉整座基础。
+    importance: high
+    frontmatter:
+      description: 不逐条驳倒旧见解，而是定位它们共用的原则（感官/记忆/理性的可靠性），用最强反例一次悬置，为重建知识腾出位置。
+    also_read:
+      - cogito-foundation
+      - error-diagnosis
+    promotion:
+      destination: promoted
+  - capability_id: cogito-foundation
+    slug: cogito-foundation
+    intents:
+      - 为知识找不可怀疑的基点
+    keywords: [我思故我在, 阿基米德点, 思维, 直观]
+    one_liner: 假定一切为假，找出连怀疑也无法取消的那一点。
+    importance: high
+    frontmatter:
+      description: 在全面悬置之后，找出"做这个悬置"本身所预设的不可取消之物，作为重建知识的最小基点，并严格限定它只蕴含什么。
+    also_read:
+      - systematic-doubt
+      - clear-and-distinct-criterion
+    promotion:
+      destination: promoted
+  - capability_id: clear-and-distinct-criterion
+    slug: clear-and-distinct-criterion
+    intents:
+      - 判断观念的可靠性
+    keywords: [清楚, 分明, 自然的光明, 明见性]
+    one_liner: 用清楚与分明双检，把"强烈相信"与"确实看见"分开。
+    importance: high
+    frontmatter:
+      description: 用"清楚"（当下完整呈现）与"分明"（边界锐利、不与别物混杂）两项检验观念或命题，缺一即标为待定，不得用作推理前提。
+    also_read:
+      - error-diagnosis
+      - cogito-foundation
+    promotion:
+      destination: promoted
+  - capability_id: error-diagnosis
+    slug: error-diagnosis
+    intents:
+      - 定位错误的根源
+    keywords: [意志, 理智, 越界, 悬置判断, 判断]
+    one_liner: 分清意志越界与知性有限，把错误定位到程序而非能力。
+    importance: medium
+    frontmatter:
+      description: 拆开判断的理智与意志两个部件，判定失误是材料不足还是程序违规，并给出以悬置规则为核心的补救，而非"下次更聪明"。
+    also_read:
+      - clear-and-distinct-criterion
+      - systematic-doubt
+    promotion:
+      destination: router
+  - capability_id: mind-body-analysis
+    slug: mind-body-analysis
+    intents:
+      - 把可分离的本质与可分离的存在分开
+    keywords: [身心区别, 实在区别, 可分离性, 统一]
+    one_liner: 判断两物在哪一层可分、哪一层不可分，并同时说明统一。
+    importance: medium
+    frontmatter:
+      description: 用可分离性检验区分"能分开设想"与"能分开存在"，分层判定认识上、功能上、存在上的可分，并要求结论同时给出区别与统一两侧。
+    also_read:
+      - clear-and-distinct-criterion
+      - cogito-foundation
+    promotion:
+      destination: router

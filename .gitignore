@@ -1,0 +1,9 @@
+# 原书全文与 OCR 原始文本：受版权限制，不随仓库分发
+_extracted/*.txt
+_ocr/*_raw.txt
+
+# OCR 中间产物
+_ocr/img_*/
+
+# 工具临时截图
+.screenshots/

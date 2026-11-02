@@ -1,0 +1,87 @@
+capabilities:
+  - capability_id: entropy-and-progress-analysis
+    slug: entropy-and-progress-analysis
+    intents:
+      - 判断系统或社会的进步是否可持续
+    keywords: [熵, 负熵, 麦克斯韦妖, 进步, 可持续性]
+    one_liner: 用熵账本判断"进步"靠什么维持、欠下什么债。
+    importance: high
+    frontmatter:
+      description: 用熵增/负熵框架核算系统或社会维持秩序的能量、物质与信息输入，判断其"进步"是否可持续及最先耗尽的约束。
+    also_read:
+      - message-as-organism-model
+      - second-industrial-revolution-planning
+    promotion:
+      destination: promoted
+  - capability_id: message-as-organism-model
+    slug: message-as-organism-model
+    intents:
+      - 把有机体或组织建模为消息与通信过程
+    keywords: [有机体, 消息, 模式, 稳态, 反馈]
+    one_liner: 区分质料与模式，判断哪些存在可以消息化。
+    importance: high
+    frontmatter:
+      description: 把有机体、组织或远程协作场景拆成质料与模式，用稳态与反馈解释其同一性，并判断哪些环节可由信息运输替代物质运输。
+    also_read:
+      - entropy-and-progress-analysis
+      - cybernetic-social-policy
+    promotion:
+      destination: promoted
+  - capability_id: learning-vs-rigid-mode-diagnosis
+    slug: learning-vs-rigid-mode-diagnosis
+    intents:
+      - 诊断组织的定型化僵化并设计解冻
+    keywords: [定型, 学习, 策略反馈, 组织僵化, 可塑性]
+    one_liner: 区分定型与学习两种模式，找出被结构锁死的行为。
+    importance: high
+    frontmatter:
+      description: 区分由结构锁定的"定型"行为与修改总策略的"学习"行为，诊断组织僵化点，并给出权限、时间与策略反馈三项解冻措施。
+    also_read:
+      - second-industrial-revolution-planning
+      - message-as-organism-model
+    promotion:
+      destination: promoted
+  - capability_id: cybernetic-social-policy
+    slug: cybernetic-social-policy
+    intents:
+      - 用控制论视角评估通信与信息政策
+    keywords: [保密, 专利, 法律, 通信堵塞, 伪通信]
+    one_liner: 分层评估政策对通信通路的侵蚀与修复。
+    importance: medium
+    frontmatter:
+      description: 按信源、信道、信码、语义、执行五层评估保密、专利、媒体与信息公开政策，区分自然噪声与有意堵塞，检查通信成本与伪通信激励。
+    also_read:
+      - entropy-and-progress-analysis
+      - message-as-organism-model
+      - learning-vs-rigid-mode-diagnosis
+    promotion:
+      destination: router
+  - capability_id: second-industrial-revolution-planning
+    slug: second-industrial-revolution-planning
+    intents:
+      - 评估自动化的劳动替代并规划过渡
+    keywords: [自动化, 第二次工业革命, 奴隶劳动, 失业, 过渡期]
+    one_liner: 按替代层级估算自动化冲击，并规划过渡期政策。
+    importance: high
+    frontmatter:
+      description: 按替代层级盘点自动化/AI 冲击的职能，用"自动化等价于奴隶劳动"估算价格与就业效应，识别不经济边界，并规划再培训、工时与分配过渡。
+    also_read:
+      - entropy-and-progress-analysis
+      - learning-vs-rigid-mode-diagnosis
+      - cybernetic-social-policy
+    promotion:
+      destination: promoted
+  - capability_id: secrecy-policy-tradeoff
+    slug: secrecy-policy-tradeoff
+    intents:
+      - 评估保密政策在安全与科学进步之间的权衡
+    keywords: [保密, 安全, 科学交流, 权衡, 堵塞]
+    one_liner: 在安全收益与科学进步成本之间评估保密政策的得失。
+    importance: medium
+    frontmatter:
+      description: 评估一项保密/信息公开政策：安全上得到什么、科学交流上失去什么，重复劳动与堵塞的成本由谁承担，是否存在更窄的保密范围。
+    also_read:
+      - cybernetic-social-policy
+      - entropy-and-progress-analysis
+    promotion:
+      destination: router

@@ -1,0 +1,69 @@
+capabilities:
+  - capability_id: nine-laws-application
+    slug: nine-laws-application
+    intents:
+      - 应用造物九律设计活系统
+    keywords: [造物九律, 分布式, 自下而上, 涌现]
+    one_liner: 用造物九律逐条检查和设计复杂活系统。
+    importance: high
+    frontmatter:
+      description: 对照造物九律（分布式/自下而上/递增收益/模块化/边界/错误/多目标/不均衡/变自生变）设计或改造复杂系统。
+    also_read:
+      - emergent-design
+      - letting-go-of-control
+    promotion:
+      destination: promoted
+  - capability_id: emergent-design
+    slug: emergent-design
+    intents:
+      - 用涌现方式设计复杂系统
+    keywords: [涌现, 蜂群思维, 去中心化]
+    one_liner: 定义简单个体和规则，让复杂行为从交互中涌现。
+    importance: high
+    frontmatter:
+      description: 通过定义简单个体和局部规则，让复杂整体行为从大量交互中涌现。
+    also_read:
+      - nine-laws-application
+      - decentralized-architecture
+    promotion:
+      destination: promoted
+  - capability_id: evolutionary-search
+    slug: evolutionary-search
+    intents:
+      - 用进化算法搜索解空间
+    keywords: [进化, 遗传算法, 变异, 选择]
+    one_liner: 用变异+选择+遗传搜索大解空间。
+    importance: high
+    frontmatter:
+      description: 定义适应度函数，用进化算法（变异+选择+遗传）在大解空间中搜索最优解。
+    also_read:
+      - nine-laws-application
+    promotion:
+      destination: promoted
+  - capability_id: letting-go-of-control
+    slug: letting-go-of-control
+    intents:
+      - 放手控制复杂系统
+    keywords: [控制, 放手, 反馈, 自组织]
+    one_liner: 用反馈替代指令，允许系统自组织。
+    importance: medium
+    frontmatter:
+      description: 识别必须控制的部分（目标、边界），放手可自组织的部分，用反馈替代指令。
+    also_read:
+      - emergent-design
+    promotion:
+      destination: router
+  - capability_id: decentralized-architecture
+    slug: decentralized-architecture
+    intents:
+      - 设计去中心化架构
+    keywords: [去中心化, 分布式, 自下而上]
+    one_liner: 将控制权下放，让秩序从局部涌现。
+    importance: medium
+    frontmatter:
+      description: 将控制权下放到节点，定义局部规则，让整体秩序从底层涌现。
+    also_read:
+      - emergent-design
+      - nine-laws-application
+    promotion:
+      destination: router

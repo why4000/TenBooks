@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>书转技能 · 知识技能库</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◆</span>
+      <h1>书转技能 · 知识技能库</h1>
+    </div>
+    <div class="search-wrap">
+      <input type="text" v-model="keyword" placeholder="🔍 搜索书籍、框架、能力、术语…" class="search-input">
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- 左侧：书籍导航树 -->
+    <aside class="sidebar">
+      <div class="panel">
+        <div class="panel-header" @click="togglePanel('books')">
+          <span>📚 书籍 ({{ filteredBooks.length }})</span>
+          <span class="arrow" :class="{open: panels.books}">▼</span>
+        </div>
+        <div class="panel-body" v-show="panels.books">
+          <div class="filter-row">
+            <button class="chip" :class="{active: filterBook==='all'}" @click="filterBook='all'">全部</button>
+          </div>
+          <ul class="book-list">
+            <li v-for="b in filteredBooks" :key="b.slug"
+                :class="{active: activeBook===b.slug}"
+                @click="selectBook(b.slug)">
+              <span class="book-title">{{ b.title }}</span>
+              <span class="book-author">{{ b.author }}</span>
+              <span class="book-meta">{{ b.chapters.length }}章 · {{ b.capabilities.length }}能力</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 能力调用链树 -->
+      <div class="panel">
+        <div class="panel-header" @click="togglePanel('tree')">
+          <span>🌳 能力调用链</span>
+          <span class="arrow" :class="{open: panels.tree}">▼</span>
+        </div>
+        <div class="panel-body" v-show="panels.tree">
+          <div v-if="activeBookObj">
+            <p class="tree-hint">点击能力节点跳转</p>
+            <tree-node v-for="node in capTree" :key="node.id" :node="node" :level="0"
+                       @select="jumpToCap"></tree-node>
+          </div>
+          <p v-else class="empty">请选择一本书</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 右侧：主内容 -->
+    <main class="content">
+      <div v-if="!activeBookObj" class="empty-state">
+        <div class="big-icon">📖</div>
+        <h2>选择一本书开始探索</h2>
+        <p>左侧选择书籍，查看框架、章节、能力卡片和术语。</p>
+      </div>
+
+      <div v-else>
+        <!-- 书籍信息卡 -->
+        <section class="book-header" :id="'book-'+activeBookObj.slug">
+          <h2>{{ activeBookObj.title }}</h2>
+          <div class="book-sub">{{ activeBookObj.author }} · {{ activeBookObj.type }}</div>
+          <div class="book-stats">
+            <span class="stat">📋 {{ activeBookObj.chapters.length }} 章节</span>
+            <span class="stat">🧩 {{ activeBookObj.frameworks.length }} 框架</span>
+            <span class="stat">⚡ {{ activeBookObj.capabilities.length }} 能力</span>
+            <span class="stat">📖 {{ activeBookObj.glossary.length }} 术语</span>
+          </div>
+        </section>
+
+        <!-- 框架 -->
+        <section class="panel">
+          <div class="panel-header" @click="togglePanel('frameworks')">
+            <span>🧩 核心框架 ({{ activeBookObj.frameworks.length }})</span>
+            <span class="arrow" :class="{open: panels.frameworks}">▼</span>
+          </div>
+          <div class="panel-body" v-show="panels.frameworks">
+            <div class="framework-grid">
+              <div v-for="(fw, i) in filteredFrameworks" :key="i"
+                   class="framework-card"
+                   :id="'fw-'+activeBookObj.slug+'-'+i">
+                <div class="fw-name">{{ fw.name }}</div>
+                <div class="fw-desc" v-if="fw.desc">{{ fw.desc }}</div>
+                <div class="fw-when" v-if="fw.use_when"><b>适用：</b>{{ fw.use_when }}</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 章节 -->
+        <section class="panel">
+          <div class="panel-header" @click="togglePanel('chapters')">
+            <span>📖 章节 ({{ activeBookObj.chapters.length }})</span>
+            <span class="arrow" :class="{open: panels.chapters}">▼</span>
+          </div>
+          <div class="panel-body" v-show="panels.chapters">
+            <div v-for="(ch, i) in activeBookObj.chapters" :key="i"
+                 class="chapter-item"
+                 :id="'ch-'+activeBookObj.slug+'-'+ch.file">
+              <div class="ch-title" @click="toggleChapter(ch.file)">
+                <span class="arrow" :class="{open: openChapters[ch.file]}">▶</span>
+                {{ ch.title }}
+              </div>
+              <div class="ch-core" v-if="ch.core">{{ ch.core }}</div>
+              <div class="ch-content" v-show="openChapters[ch.file]">
+                <pre>{{ ch.content }}</pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 能力卡片 -->
+        <section class="panel">
+          <div class="panel-header" @click="togglePanel('caps')">
+            <span>⚡ 能力卡片 ({{ activeBookObj.capabilities.length }})</span>
+            <span class="arrow" :class="{open: panels.caps}">▼</span>
+          </div>
+          <div class="panel-body" v-show="panels.caps">
+            <div v-for="(cap, i) in activeBookObj.capabilities" :key="i"
+                 class="cap-card"
+                 :class="cap.destination"
+                 :id="'cap-'+activeBookObj.slug+'-'+cap.capability_id">
+              <div class="cap-head">
+                <span class="cap-name">{{ cap.one_liner || cap.capability_id }}</span>
+                <span class="cap-tag" :class="cap.destination">{{ cap.destination }}</span>
+                <span class="cap-imp" v-if="cap.importance">{{ cap.importance }}</span>
+              </div>
+              <div class="cap-desc" v-if="cap.description">{{ cap.description }}</div>
+              <div class="cap-kw" v-if="cap.keywords && cap.keywords.length">
+                <span class="kw" v-for="k in cap.keywords" :key="k">{{ k }}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 术语表 -->
+        <section class="panel">
+          <div class="panel-header" @click="togglePanel('glossary')">
+            <span>📖 术语表 ({{ activeBookObj.glossary.length }})</span>
+            <span class="arrow" :class="{open: panels.glossary}">▼</span>
+          </div>
+          <div class="panel-body" v-show="panels.glossary">
+            <table class="glossary-table">
+              <tr v-for="(g, i) in filteredGlossary" :key="i">
+                <td class="g-term">{{ g.term }}</td>
+                <td class="g-def">{{ g.def }}</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>书转技能 · 2026-10-24 · {{ books.length }} 本书</span>
+  </footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+capabilities:
+  - capability_id: feedback-loop-design
+    slug: feedback-loop-design
+    intents:
+      - 用反馈替代开环控制
+    keywords: [反馈, 闭环, 偏差, 伺服, 增益]
+    one_liner: 用测量—比较—纠正的闭环结构替代开环模型。
+    importance: high
+    frontmatter:
+      description: 把开环控制改造为闭环反馈，按稳定性、快速性、精度三条准则设计前向与反馈通道。
+    also_read:
+      - transfer-function-modeling
+      - stability-analysis
+    promotion:
+      destination: promoted
+  - capability_id: transfer-function-modeling
+    slug: transfer-function-modeling
+    intents:
+      - 把系统抽象为输入输出传递函数
+    keywords: [传递函数, 拉氏变换, 极点, 零点, 频率特性]
+    one_liner: 用传递函数把物理系统压缩成输入—输出关系。
+    importance: high
+    frontmatter:
+      description: 在零初始条件与工作点线性化下，用拉氏变换求传递函数，并由极点零点判断动态特性。
+    also_read:
+      - feedback-loop-design
+      - stability-analysis
+    promotion:
+      destination: promoted
+  - capability_id: stability-analysis
+    slug: stability-analysis
+    intents:
+      - 判断控制系统是否稳定
+    keywords: [稳定性, 乃氏判据, 路斯判据, 稳定裕度, 时滞]
+    one_liner: 从特征方程或频率特性判断闭环稳定并给出裕度。
+    importance: high
+    frontmatter:
+      description: 用路斯—胡尔维茨判据或乃氏图判断闭环稳定性；含时滞时用萨奇图分析临界时滞。
+    also_read:
+      - transfer-function-modeling
+      - feedback-loop-design
+    promotion:
+      destination: promoted
+  - capability_id: noise-filtering-design
+    slug: noise-filtering-design
+    intents:
+      - 在噪声中设计最优过滤器
+    keywords: [维纳滤波, 功率谱, 相关函数, 平均平方误差, 白噪声]
+    one_liner: 以平均平方误差最小为目标，从噪声中提取信号。
+    importance: medium
+    frontmatter:
+      description: 用信号与噪声的相关函数/功率谱，在可实现性约束下设计使平均平方误差最小的线性过滤器。
+    also_read:
+      - transfer-function-modeling
+      - stability-analysis
+    promotion:
+      destination: router
+  - capability_id: self-stabilizing-adaptive-design
+    slug: self-stabilizing-adaptive-design
+    intents:
+      - 设计自行镇定与适应环境的系统
+    keywords: [自行镇定, 适应环境, 可接受边界, 参数切换, 随机试错]
+    one_liner: 设可接受边界，越界换参数，让系统自动搜索稳定形式。
+    importance: medium
+    frontmatter:
+      description: 在相空间定义可接受边界，越界时切换参数并保留稳定形式，使系统在故障与环境变化中自行镇定。
+    also_read:
+      - stability-analysis
+      - feedback-loop-design
+    promotion:
+      destination: router

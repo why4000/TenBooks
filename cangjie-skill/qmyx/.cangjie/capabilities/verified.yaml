@@ -1,0 +1,54 @@
+capabilities:
+  - capability_id: hero-journey-mapping
+    slug: hero-journey-mapping
+    intents:
+      - 分析叙事的英雄之旅结构
+    keywords: [英雄之旅, 单一神话, 启程, 启蒙, 归来]
+    one_liner: 将叙事映射到启程→启蒙→考验→归来四阶段结构。
+    importance: high
+    frontmatter:
+      description: 分析任何叙事（故事、电影、个人历程）的英雄之旅四阶段结构。
+    also_read:
+      - call-recognition
+      - belly-of-whale-transformation
+    promotion:
+      destination: promoted
+  - capability_id: call-recognition
+    slug: call-recognition
+    intents:
+      - 识别并回应生活中的召唤
+    keywords: [召唤, 拒绝召唤, 超自然援助]
+    one_liner: 识别生活中的召唤信号，理解拒绝召唤的代价。
+    importance: high
+    frontmatter:
+      description: 识别打破平衡的召唤信号，克服拒绝，寻找援助并跨越阈限。
+    also_read:
+      - hero-journey-mapping
+    promotion:
+      destination: router
+  - capability_id: belly-of-whale-transformation
+    slug: belly-of-whale-transformation
+    intents:
+      - 经历鲸鱼之腹式转变
+    keywords: [鲸鱼之腹, 死亡重生, 转变]
+    one_liner: 通过放弃旧自我、经历黑暗期实现转变。
+    importance: medium
+    frontmatter:
+      description: 认识转变需要先放弃旧自我，经历象征性死亡与重生。
+    also_read:
+      - hero-journey-mapping
+    promotion:
+      destination: router
+  - capability_id: return-integration
+    slug: return-integration
+    intents:
+      - 将新认知整合回日常
+    keywords: [归来, 两个世界主宰, 整合]
+    one_liner: 带着恩赐归来，成为两个世界的主宰。
+    importance: medium
+    frontmatter:
+      description: 将冒险世界获得的恩赐带回日常，整合为两个世界的主宰。
+    also_read:
+      - hero-journey-mapping
+    promotion:
+      destination: router

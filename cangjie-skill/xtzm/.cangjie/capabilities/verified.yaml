@@ -1,0 +1,69 @@
+capabilities:
+  - capability_id: feedback-loop-analysis
+    slug: feedback-loop-analysis
+    intents:
+      - 识别系统反馈回路
+      - 分析系统动态行为
+    keywords: [反馈回路, 调节回路, 增强回路, 存量, 流量]
+    one_liner: 识别系统的存量、流量和反馈回路，分析其动态行为。
+    importance: high
+    frontmatter:
+      description: 通过识别存量、流量和调节/增强反馈回路，分析系统的动态行为模式。
+    also_read:
+      - archetype-matching
+      - leverage-point-location
+    promotion:
+      destination: promoted
+  - capability_id: archetype-matching
+    slug: archetype-matching
+    intents:
+      - 匹配系统基模并应用对策
+    keywords: [系统基模, 公地悲剧, 富者愈富, 转嫁负担]
+    one_liner: 将问题行为模式匹配到8大基模，应用对应对策。
+    importance: high
+    frontmatter:
+      description: 将反复出现的问题模式匹配到8大系统基模，找到根本解和对策。
+    also_read:
+      - feedback-loop-analysis
+      - symptomatic-vs-fundamental
+    promotion:
+      destination: promoted
+  - capability_id: leverage-point-location
+    slug: leverage-point-location
+    intents:
+      - 定位最有效的系统干预点
+    keywords: [杠杆点, 范式, 目标, 信息流]
+    one_liner: 从12大杠杆点中定位最有效的干预点。
+    importance: high
+    frontmatter:
+      description: 从数字到超越范式的12个杠杆点中，定位能产生最大转变的干预点。
+    also_read:
+      - feedback-loop-analysis
+    promotion:
+      destination: promoted
+  - capability_id: symptomatic-vs-fundamental
+    slug: symptomatic-vs-fundamental
+    intents:
+      - 区分症状解与根本解
+    keywords: [症状解, 根本解, 转嫁负担]
+    one_liner: 识别症状解，找到并实施根本解。
+    importance: medium
+    frontmatter:
+      description: 区分治标（症状解）和治本（根本解），避免转嫁负担成瘾。
+    also_read:
+      - archetype-matching
+    promotion:
+      destination: router
+  - capability_id: ebs-analysis
+    slug: ebs-analysis
+    intents:
+      - 从事件追溯到系统结构
+    keywords: [事件, 行为, 结构, 表象]
+    one_liner: 从事件→行为模式→系统结构三层分析，不被表象迷惑。
+    importance: medium
+    frontmatter:
+      description: 用事件-行为-结构三层框架分析问题，穿透表象找到结构根源。
+    also_read:
+      - feedback-loop-analysis
+    promotion:
+      destination: router

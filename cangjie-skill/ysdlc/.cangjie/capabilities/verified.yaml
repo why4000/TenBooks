@@ -1,0 +1,68 @@
+capabilities:
+  - capability_id: crisis-leadership-with-humanity
+    slug: crisis-leadership-with-humanity
+    intents:
+      - 危机中以人性化方式领导
+    keywords: [危机领导, 人性化, 亲自致电, 立即整改]
+    one_liner: 危机中以"人"的身份亲自直面受害者，当天启动整改。
+    importance: high
+    frontmatter:
+      description: 重大危机（尤其涉及人身伤害）时，决策者亲自联系受害者、当场回应诉求并当天整改，不让公关流程过滤人性。
+    also_read:
+      - voluntary-accountability
+    promotion:
+      destination: promoted
+  - capability_id: story-first-framing
+    slug: story-first-framing
+    intents:
+      - 把任务重构为讲故事以突破资源约束
+    keywords: [讲故事, 重构任务, 体育节目, 鲁尼]
+    one_liner: 原计划失效时，从"传递信号"转向"讲人的故事"。
+    importance: high
+    frontmatter:
+      description: 识别任务本质是讲故事而非传递信号；资源失效时挖掘人物故事替代原计划，用核心指标验证效果。
+    also_read:
+      - make-impossible-deals
+    promotion:
+      destination: promoted
+  - capability_id: voluntary-accountability
+    slug: voluntary-accountability
+    intents:
+      - 追责现场主动担责以积累信任资本
+    keywords: [主动担责, 信任资本, 承担责任]
+    one_liner: 全场沉默时第一个站起来说"是我的责任"。
+    importance: medium
+    frontmatter:
+      description: 失误追责现场主动承担属于自己环节的责任，不辩解、聚焦补救，把"另眼相看"兑现为长期信任资本。
+    also_read:
+      - crisis-leadership-with-humanity
+      - make-impossible-deals
+    promotion:
+      destination: router
+  - capability_id: make-impossible-deals
+    slug: make-impossible-deals
+    intents:
+      - 把被告知不可能的事拆解约束办成
+    keywords: [拆解约束, 禁令, 平壤转播, 不可能]
+    one_liner: 追问"不行"的边界，设计各方都赢的替代路径。
+    importance: high
+    frontmatter:
+      description: 把"不可能/禁令"拆成具体约束变量（如收钱/不收钱），在合规边界内设计各方仍有收益的替代方案并谈成。
+    also_read:
+      - story-first-framing
+    promotion:
+      destination: promoted
+  - capability_id: outsider-leadership-entry
+    slug: outsider-leadership-entry
+    intents:
+      - 外行高位入场时快速建立判断
+    keywords: [外行领导, 压制自尊, 提问式学习, 好莱坞]
+    one_liner: 承认不懂、压制自尊、多提问，用作品进入圈子。
+    importance: medium
+    frontmatter:
+      description: 高位外行空降陌生领域时，抑制假装内行的冲动、提问式学习，关键拍板依据确定性差异，用作品进入封闭圈子。
+    also_read:
+      - story-first-framing
+      - voluntary-accountability
+    promotion:
+      destination: router

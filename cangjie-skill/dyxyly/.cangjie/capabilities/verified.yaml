@@ -1,0 +1,69 @@
+capabilities:
+  - capability_id: first-principles-deduction
+    slug: first-principles-deduction
+    intents:
+      - 从基本要素重新推导解决方案
+      - 打破路径依赖
+    keywords: [第一性原理, 演绎法, 拆解, 基本要素]
+    one_liner: 拆解问题到不可再分的基本要素，从第一性原理重新推导。
+    importance: high
+    frontmatter:
+      description: 将问题拆解到基本要素，从第一性原理出发重新推导，而非在既有方案上改良。
+    also_read:
+      - boundary-breaking-innovation
+      - identify-implicit-assumptions
+    promotion:
+      destination: promoted
+  - capability_id: boundary-breaking-innovation
+    slug: boundary-breaking-innovation
+    intents:
+      - 打破系统基石假设实现突破
+    keywords: [破界创新, 基石假设, 隐含假设, 边界外延]
+    one_liner: 打破原有基石假设，建立更广阔新基石，重建系统。
+    importance: high
+    frontmatter:
+      description: 通过打破系统的隐含基石假设，建立更广阔的新前提，在新基石上重建系统。
+    also_read:
+      - first-principles-deduction
+      - identify-implicit-assumptions
+    promotion:
+      destination: promoted
+  - capability_id: identify-implicit-assumptions
+    slug: identify-implicit-assumptions
+    intents:
+      - 识别系统中未被审视的前提
+    keywords: [隐含假设, 基石假设, 质疑]
+    one_liner: 列出系统中"理所当然"的前提，逐一质疑。
+    importance: high
+    frontmatter:
+      description: 识别系统中未被审视的隐含前提，找到导致悖论或限制的那个假设。
+    also_read:
+      - boundary-breaking-innovation
+    promotion:
+      destination: router
+  - capability_id: three-fold-coherence-check
+    slug: three-fold-coherence-check
+    intents:
+      - 检验理论的可靠性
+    keywords: [逻辑三洽, 自洽, 他洽, 续洽]
+    one_liner: 用自洽、他洽、续洽三重标准检验理论。
+    importance: medium
+    frontmatter:
+      description: 通过逻辑三洽（自洽/他洽/续洽）检验一个理论或信念的可靠性。
+    also_read:
+      - anti-herd-thinking
+    promotion:
+      destination: router
+  - capability_id: anti-herd-thinking
+    slug: anti-herd-thinking
+    intents:
+      - 克服从众效应独立思考
+    keywords: [从众效应, 反共识, 群体信念]
+    one_liner: 识别群体信念，用第一性原理重新推导，承受孤独。
+    importance: medium
+    frontmatter:
+      description: 识别并克服从众效应，区分"事实"与"所有人相信的"。
+    also_read:
+      - three-fold-coherence-check
+    promotion:
+      destination: router

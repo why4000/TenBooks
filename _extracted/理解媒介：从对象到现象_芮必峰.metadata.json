@@ -1,0 +1,46 @@
+{
+  "source_file": "\\\\Temp2657\\Disk4_Tech\\MY07_SKILLS\\SKL15-书转技能\\BOOKS\\理解媒介：从对象到现象_芮必峰.pdf",
+  "filename": "理解媒介：从对象到现象_芮必峰.pdf",
+  "format": "pdf",
+  "extraction_method": "pdftotext",
+  "extraction_mode": "text",
+  "file_size_mb": 1.67,
+  "pages": 15,
+  "chars": 19832,
+  "words": 791,
+  "estimated_tokens": 11339,
+  "estimated_tokens_human": "~11K",
+  "images_dropped": 0,
+  "workdir": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\book_skill_work-51048",
+  "output_text": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\book_skill_work-51048\\full_text.txt",
+  "total_sources": 1,
+  "sources": [
+    {
+      "source_file": "\\\\Temp2657\\Disk4_Tech\\MY07_SKILLS\\SKL15-书转技能\\BOOKS\\理解媒介：从对象到现象_芮必峰.pdf",
+      "filename": "理解媒介：从对象到现象_芮必峰.pdf",
+      "format": "pdf",
+      "extraction_method": "pdftotext",
+      "fallback_reason": null,
+      "file_size_mb": 1.67,
+      "sha256": "ba35fb66f8fe2c58ecb34e8c27ee2b04295ad05825e8bd1ff67cd569ed84a878",
+      "pages": 15,
+      "pages_label": "pages",
+      "chars": 19563,
+      "words": 785,
+      "estimated_tokens": 11304,
+      "images_dropped": null,
+      "chapters_detected": 1,
+      "chapters_method": "numeric",
+      "chapter_headings_sample": [
+        "24    Understanding Media: from Object to Phenomenon"
+      ],
+      "has_toc": false
+    }
+  ],
+  "chapters_detected": 1,
+  "chapters_method": "numeric",
+  "chapter_headings_sample": [
+    "24    Understanding Media: from Object to Phenomenon"
+  ],
+  "has_toc": false
+}
